@@ -1422,7 +1422,8 @@ dependencies = [
 name = "dolly"
 version = "0.4.2"
 dependencies = [
- "glam",
+ "bevy_math",
+ "bevy_transform",
 ]
 
 [[package]]
