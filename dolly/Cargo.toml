@@ -1,0 +1,20 @@
+[package]
+name = "dolly"
+version = "0.4.2"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Composable camera rigs"
+repository = "https://github.com/h3r2tic/dolly"
+documentation = "https://docs.rs/dolly"
+keywords = ["gamedev", "camera", "3d"]
+categories = ["game-development"]
+readme = "crates-io.md"
+rust-version = "1.60"
+
+[dependencies]
+bevy_math = "0.14"
+bevy_transform = "0.14"
+#glam = ">=0.21, <=0.24"
+
+[dev-dependencies]
+#macroquad = "0.4.4"
