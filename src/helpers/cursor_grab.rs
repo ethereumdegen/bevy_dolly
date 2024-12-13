@@ -1,7 +1,8 @@
 use bevy::{
     prelude::*,
-    window::{CursorGrabMode, PrimaryWindow},
+    window::{CursorGrabMode, PrimaryWindow} , 
 };
+ 
 use leafwing_input_manager::prelude::*;
 
 pub struct DollyCursorGrab;
@@ -70,15 +71,15 @@ impl Default for DollyCursorGrabInputBundle {
 
 /// Grabs/ungrabs mouse cursor
 fn toggle_grab_cursor(window: &mut Window) -> bool {
-    match window.cursor.grab_mode {
+    match window.cursor_options.grab_mode {
         CursorGrabMode::None => {
-            window.cursor.grab_mode = CursorGrabMode::Confined;
-            window.cursor.visible = false;
+            window.cursor_options.grab_mode = CursorGrabMode::Confined;
+            window.cursor_options.visible = false;
             false
         }
         _ => {
-            window.cursor.grab_mode = CursorGrabMode::None;
-            window.cursor.visible = true;
+            window.cursor_options.grab_mode = CursorGrabMode::None;
+            window.cursor_options.visible = true;
             true
         }
     }
